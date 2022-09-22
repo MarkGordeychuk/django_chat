@@ -112,7 +112,7 @@ main button:hover{
   margin: 5px;
   width: calc(100% - 10px);
   font-size: 20px;
-  grid-auto-columns: min-content;
+  grid-auto-columns: max-content;
   column-gap: 10px;
 }
 
