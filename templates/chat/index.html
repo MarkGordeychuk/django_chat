@@ -1,0 +1,37 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <link href="{% static 'css/style.css' %}" rel="stylesheet">
+</head>
+<body>
+<aside>
+  <div id="chat-rooms">
+    <a id="roomssetings">Chats:</a>
+    <ul id="siderooms"></ul>
+  </div>
+  <div id="user">
+    <a href="{% url 'accounts:update' %}">
+      <img class="avatar" src="{% firstof request.user.avatar 'static/images/noavatar.png' %}">
+      {{ request.user }}
+    </a>
+  </div>
+</aside>
+<main>
+</main>
+<script>
+  const csrfToken="{{ csrf_token }}"
+  const userInfo={
+    id: {{ request.user.id }},
+    name: "{{ request.user.name }}",
+    avatar: "{{ request.user.avatar }}"
+  }
+</script>
+<script src="{% static 'js/apps.js' %}"></script>
+<script src="{% static 'js/websocket.js' %}"></script>
+<script src="{% static 'js/requests.js' %}"></script>
+<script src="{% static 'js/sidebar.js' %}"></script>
+</body>
+</html>

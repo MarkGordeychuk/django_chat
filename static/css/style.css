@@ -1,0 +1,133 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+aside {
+  position: fixed;
+  height: calc(100% - 40px);
+  width: 16rem;
+  top: 0;
+  right: 0;
+  background-color: dodgerblue;
+  overflow-x: hidden;
+  padding: 20px 0;
+  z-index: 1;
+  font-size: 30px;
+  color: wheat;
+  text-align: center;
+}
+
+aside div {
+  padding: 5px 0;
+  width: 100%;
+}
+
+aside ul {
+  margin: 0;
+  padding: 5px 0;
+}
+
+aside li {
+  display: block;
+}
+
+aside a {
+  display: block;
+  margin: 5px 5px 5px 5px;
+  width: calc(100% - 10px);
+  text-decoration: none;
+  cursor: pointer;
+  border-radius: 10px;
+  color: wheat;
+}
+
+aside a:hover {
+  background-color: blue;
+}
+
+aside #chat-rooms {
+  height: calc(100% - 80px);
+}
+
+aside #user {
+  height: 60px;
+}
+
+main {
+  margin-right: 16rem;
+  padding: 10px;
+  height: calc(100vh - 20px);
+}
+
+.room-settings {
+  display: grid;
+  grid-template-areas: "a b" "c c";
+  gap: 30px;
+  font-size: 20px;
+}
+
+.room-settings .room {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  margin: 10px;
+}
+
+.room-settings .room *{
+  margin: 0 10px;
+}
+
+main button{
+  font-size: 15px;
+  background-color: dodgerblue;
+  border: none;
+  border-radius: 5px;
+  padding: 5px;
+  cursor: pointer;
+  color: wheat;
+}
+
+main button:hover{
+  background-color: darkblue;
+}
+
+.chat {
+  width: 100%;
+  height: 80%;
+  border-width: 2px;
+  border-style: inset;
+  overflow-y: auto;
+}
+
+.avatar {
+  vertical-align: middle;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.message {
+  display: grid;
+  margin: 5px;
+  width: calc(100% - 10px);
+  font-size: 20px;
+  grid-auto-columns: min-content;
+  column-gap: 10px;
+}
+
+.message .avatar {
+  grid-column: 1;
+  grid-row: 1 / 3;
+}
+
+.message-name {
+  font-weight: bold;
+  grid-column: 2;
+  grid-row: 1;
+}
+
+.message-text {
+  grid-column: 2;
+  grid-row: 2;
+}

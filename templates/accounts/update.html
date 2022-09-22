@@ -1,0 +1,20 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>User Settings</title>
+  <link rel="stylesheet" href="{% static 'css/form.css' %}">
+</head>
+<body>
+<form method="post" enctype="multipart/form-data">
+  {% csrf_token %}
+  {{ form.as_p }}
+  <button type="submit">Изменить</button>
+  <p>
+    <a href="{% url 'accounts:password_change' %}">Сменить пароль</a>
+    <a href="{% url 'accounts:logout' %}">Выйти</a>
+  </p>
+</form>
+</body>
+</html>

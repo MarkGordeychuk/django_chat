@@ -1,0 +1,47 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: dodgerblue;
+}
+
+form, body div {
+  background-color: white;
+  padding: 30px;
+  border-radius: 20px;
+  font-size: 20px;
+  box-shadow: 0 0 10px 10px darkblue;
+}
+
+form *, body div * {
+  margin: 10px 0;
+}
+
+form input[type="text"], form input[type="password"] {
+  font-size: 20px;
+}
+
+form button[type="submit"]{
+  width: 100%;
+  font-size: 20px;
+  color: wheat;
+  background-color: blue;
+  border-radius: 10px;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+}
+
+form button[type="submit"]:hover{
+  background-color: darkblue;
+}
+
+form ul{
+  margin-left: 2em;
+}
